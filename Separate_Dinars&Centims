@@ -1,0 +1,5 @@
+p = float(input("Please type in a price: "))
+d = int(p) 
+c = round((p - d) * 10000)  
+print(f"Dinars: {d}")
+print(f"Centimes: {c}")

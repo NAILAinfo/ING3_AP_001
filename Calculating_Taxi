@@ -1,0 +1,17 @@
+people = int(input("How many people need a ride? "))
+capacity = int(input("How many people fit in one taxi? "))
+result = people // capacity
+
+# Check if there are any leftover people who would need an extra taxi and if there are leftover people, add one more taxi
+m = people % capacity
+if m > 0:
+    result += 1
+
+print(f"\nTotal number of people: {people}")
+print(f"Each taxi can carry {capacity} people.")
+print(f"\nNumber of full taxis needed: {result}")
+
+if m > 0:
+    print(f"\nSince there are {m} people left, an additional taxi is needed.")
+else:
+    print("\nNo extra taxi is needed.")

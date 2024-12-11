@@ -1,0 +1,21 @@
+m = float(input("Total amount: "))
+f = int(input("Number of items: "))
+day = input("Day of the week: ").upper()
+
+if day in ["SATURDAY", "SUNDAY"]:
+    x = 0.20  
+else:
+    x = 0.10  
+
+if f > 5:
+    x += 0.05  
+
+n = m * (1 - x)
+print(f"Total price after discount: {n} dinars")
+# m represente the total amount
+# f represente number of items 
+# day represente day of week
+# x represente the discount
+# n represente the total after the discount
+# Upper is a method that makes all words capitalized
+

@@ -1,0 +1,11 @@
+n1 = input("Runner 1:\nName: ")
+t1 = float(input("Time (in seconds): "))
+n2 = input("Runner 2:\nName: ")
+t2 = float(input("Time (in seconds): "))
+
+if t1 < t2:
+    print(f"The faster runner is {n1}")
+elif t1 > t2:
+    print(f"The faster runner is {n2}")
+else:
+    print(f"{n1} and {n2} have the same time")
