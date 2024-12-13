@@ -1,0 +1,22 @@
+print("Entrez les noms des villes un par un, tapez '0' pour terminer")
+hashmap = {}  
+while True:
+    v = input("Ville: ").strip()  
+    if v == "0": 
+        break
+    if v:  
+        p = len(v) * 1000000  
+        hashmap[v] = p  
+
+
+sorted_cities = sorted(hashmap.items(), key=lambda item: item[1], reverse=True)
+# trier la hashmap 
+    # key=lambda item: item[1] :indique que le tri doit s'effectuer en utilisant le 2eme element (dans ce code d'apres le nombre de polpulation  )
+   # reverse=True :pour rendre le trie dans l'ordre décroissant
+
+print("\nLes villes et leurs populations :")
+for v, p in sorted_cities:
+    print(f"{v}: {p:,} citizens")
+    
+# la methode strip() Supprimer les espaces inutiles
+# la methode len() retourne la longueur de l'objet (dans ce code elle retourne la longueur du mot ville)
