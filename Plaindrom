@@ -1,0 +1,15 @@
+def palindrome():
+    m = input("Enter a word: ").strip().lower()
+    
+    est_palindrome = True  
+    for i in range(len(m) // 2):
+        if m[i] != m[-i - 1]:  
+            est_palindrome = False
+            break  
+    
+    if est_palindrome:
+        print("Yes, it's a palindrome.")
+    else:
+        print("No, it's not a palindrome.")
+
+palindrome()
