@@ -1,0 +1,7 @@
+m = input("Please type in a string: ")
+v = ['a', 'e', 'o']
+for i in v:
+    if i in m:
+        print(f"{i} found")
+    else:
+        print(f"{i} not found")
