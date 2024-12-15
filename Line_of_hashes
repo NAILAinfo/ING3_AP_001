@@ -1,0 +1,5 @@
+def exo11():
+    m = int(input("Largeur : "))
+    print("#" * m)
+
+exo11()
