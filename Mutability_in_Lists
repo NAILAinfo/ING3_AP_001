@@ -1,0 +1,38 @@
+def update_list():
+    # Step 1: Initialize the list
+    numbers = [1, 2, 3, 4, 5]
+
+    while True:
+        try:
+            # Step 2.1: Ask the user for an index
+            index = int(input("Enter index (-1 to quit): "))
+            
+            # Check for exit condition
+            if index == -1:
+                print("Exiting program.")
+                break
+
+            # Check for valid index range
+            if index < 0 or index >= len(numbers):
+                print(f"Invalid index. Please enter a number between 0 and {len(numbers) - 1}.")
+                continue
+
+            # Step 2.2: Ask the user for a new value
+            new_value = input("Enter new value: ")
+
+            # Validate the new value is an integer
+            if not new_value.isdigit():
+                print("Invalid input. Please enter an integer value.")
+                continue
+            
+            # Update the list
+            numbers[index] = int(new_value)
+
+            # Step 2.3: Print the updated list
+            print("Updated list:", numbers)
+        
+        except ValueError:
+            print("Invalid input. Please enter integers only.")
+
+# Run the program
+update_list()
