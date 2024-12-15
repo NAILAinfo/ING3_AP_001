@@ -1,0 +1,7 @@
+def exo12():
+    w = int(input("Width: "))
+    h = int(input("Height: "))
+    for _ in range(h):
+        print("#" * w)
+
+exo12()
